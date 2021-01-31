@@ -14,8 +14,8 @@ import datetime
 import scipy.stats as stats
 
 #### How to use this file, minmig_pow_sim_NL.py
-(1) Make sure you're operaing python 3 and have all the necessary modules installed (i.e.,``argparse``, ``numpy``, ``matplotlib``, ``simuPOP``, ``time``, ``datetime``, ``scipy``)
-(2) Prepare a file of your global allele frequencies (see example file [here](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/all_AFs_for_sp.txt)), where each line includes the number of alleles, followed by the frequency of each allele, delimited by white space. Allele frequencies must add to 1 for each locus. For example, the first rows should look something like this below, if you have biallelic loci. 
+1. Make sure you're operaing python 3 and have all the necessary modules installed (i.e.,``argparse``, ``numpy``, ``matplotlib``, ``simuPOP``, ``time``, ``datetime``, ``scipy``)
+2. Prepare a file of your global allele frequencies (see example file [here](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/all_AFs_for_sp.txt)), where each line includes the number of alleles, followed by the frequency of each allele, delimited by white space. Allele frequencies must add to 1 for each locus. For example, the first rows should look something like this below, if you have biallelic loci. 
 
 ```
       2    0.935714  0.064286
@@ -23,6 +23,6 @@ import scipy.stats as stats
       2    0.819643  0.180357
 ```
 
-(3) Prepare a parameters file (see [example](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/params.txt))
-(4) Call this script at the command line using:
+3. Prepare a parameters file (see [example](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/params.txt))
+4. Call this script at the command line using:
    ``      python minmig_pow_sim_NL.py -a allele_freq_file -p params_file -o output_name``
