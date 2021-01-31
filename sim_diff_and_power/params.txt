@@ -1,0 +1,5 @@
+### parameter file for sim_diff_and_power.py
+10 # number of replicates to run for each set of model parameters
+100 500 # population sizes to try, separated by white space
+0.001 0.01 # migration rates to try, separated by white space
+1 10 # number of generations of drift to try, separated by white space
