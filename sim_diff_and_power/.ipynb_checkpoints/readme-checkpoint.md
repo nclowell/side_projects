@@ -4,14 +4,7 @@ This script runs a simulation model to evalute under which conditions of migrati
 
 The script simulates two populations, connected by some amount of migration. Loci and allele frequencies are parameterized using empirical data, supplied as an input argument (``-a``). Then, a range of parameter values for migration rates, population sizes, and generations of drift are supplied in a parameter file (``-p``), as well as a number of replicate times to run the model with each set of input parameters. 
 
-mport argparse
-import sys
-import numpy as np
-import matplotlib.pyplot as plt
-import simuPOP as sim
-import time
-import datetime
-import scipy.stats as stats
+For each replicate of parameters (migration rate, population size, and generations of drift), it estimates Fst between the two populations, a global (locus) chi-squared statistic, and an associated p-value. To do so, it runs a chi-squared test for each locus and reports this global test and p-value by summing the degrees of freedom and chi-squared statitics across loci. If any locus loses an allele in at least one of the two populations, the test will produce a ``NaN``. For this reason, I added some code to remove these ``NaNs`` and calculate the global test statistic and p-value without them. The model output also reports the proportion of loci that produced ``NaNs`` (and thus had dropped chi-squared tests for some loci) so that the user can interpret results in light of this.
 
 #### How to use this file, minmig_pow_sim_NL.py
 1. Make sure you're operaing python 3 and have all the necessary modules installed (i.e.,``argparse``, ``numpy``, ``matplotlib``, ``simuPOP``, ``time``, ``datetime``, ``scipy``)
@@ -26,3 +19,10 @@ import scipy.stats as stats
 3. Prepare a parameters file (see [example](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/params.txt))
 4. Call this script at the command line using:
    ``      python minmig_pow_sim_NL.py -a allele_freq_file -p params_file -o output_name``
+   
+#### Output
+
+The output of the model is a file called ``*_globFstChi2_results`` (example [here](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/test_globFstChi2_results.txt))and it looks like this:
+
+![sim_out](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/sim_out.PNG?raw=true)
+
