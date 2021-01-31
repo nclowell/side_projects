@@ -1,6 +1,6 @@
 ## sim_diff_and_power.py
 
-This script runs a simulation model to evalute under which conditions of migration rates, population sizes, and generations of drift different Fst values are achieved and how easily they are detected using a chi square test. It can be used as a power analysis, as well as to see under what conditions migration and population sizes the empirically observed global Fst can be expected.
+This script runs a simulation model to evalute under which conditions of migration rates, population sizes, and generations of drift different Fst values are achieved and how easily they are detected using a chi square test. It can be used as a power analysis, as well as to see under what conditions the empirically observed global Fst can be expected.
 
 The script simulate two populations, connected by some amount of migration. Loci and allele frequencies are parameterized using empirical data, supplied as an input argument. Then, a range of parameter values for migration rates, population sizes, and generations of drift are supplied in a parameter file, as well as a number of replicate times to run the model with each set of input parameters.
 
