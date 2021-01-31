@@ -203,7 +203,7 @@ for rep in range(int(params_dict["reps"][0])):
                 sp_for_cg.write(str(dropped_chi[rep][popsize][mig_rate][gens]) + "\n")
 sp_for_cg.close()
 
-log.write("endTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
+log.write("\nendTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
 log.close()
 
 endTime = time.time()

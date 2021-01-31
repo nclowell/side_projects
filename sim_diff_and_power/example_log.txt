@@ -1,4 +1,4 @@
-startTime 2021-01-30 22:24:22
+startTime 2021-01-30 22:31:05
 
 -----Parameters----
 replicates 10.0
@@ -7,7 +7,7 @@ migrationRates  0.001 0.01
 generationsDrift 1.0 10.0
 
 -----Simulation-----
-rep 02021-01-30 22:24:22
+rep 02021-01-30 22:31:05
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -22,7 +22,7 @@ rep 02021-01-30 22:24:22
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 12021-01-30 22:24:36
+rep 12021-01-30 22:31:20
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -37,7 +37,7 @@ rep 12021-01-30 22:24:36
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 22021-01-30 22:24:51
+rep 22021-01-30 22:31:35
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -52,7 +52,7 @@ rep 22021-01-30 22:24:51
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 32021-01-30 22:25:06
+rep 32021-01-30 22:31:50
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -67,7 +67,7 @@ rep 32021-01-30 22:25:06
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 42021-01-30 22:25:20
+rep 42021-01-30 22:32:06
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -82,7 +82,7 @@ rep 42021-01-30 22:25:20
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 52021-01-30 22:25:35
+rep 52021-01-30 22:32:21
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -97,7 +97,7 @@ rep 52021-01-30 22:25:35
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 62021-01-30 22:25:49
+rep 62021-01-30 22:32:36
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -112,7 +112,7 @@ rep 62021-01-30 22:25:49
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 72021-01-30 22:26:04
+rep 72021-01-30 22:32:51
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -127,7 +127,7 @@ rep 72021-01-30 22:26:04
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 82021-01-30 22:26:18
+rep 82021-01-30 22:33:06
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -142,7 +142,7 @@ rep 82021-01-30 22:26:18
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 92021-01-30 22:26:33
+rep 92021-01-30 22:33:21
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -157,4 +157,5 @@ rep 92021-01-30 22:26:33
   migrate 0.01
    gens 1.0
    gens 10.0
-endTime 2021-01-30 22:26:47
+
+endTime 2021-01-30 22:33:36
