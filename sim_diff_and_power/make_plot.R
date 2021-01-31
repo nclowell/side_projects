@@ -8,7 +8,14 @@ library(tidyverse)
 ###########################################################################
 
 setwd("C:/Users/Natalie Lowell/SHARED_FOLDER/hyak_files/nl_minmig_pc04")
-alpha = 0.05
+
+###########################################################################
+### parameters
+
+sim_out <- "pc04_globFstChi2_results.txt" # name out output from model
+alpha <- 0.05 # for chi square tests
+low_thresh <- 0.0068 # empirical global FST, thresholds for tile plot
+high_thresh <- 0.068 # 10X global FST, thresholds for tile plot
 
 ###########################################################################
 ### functions
@@ -26,23 +33,14 @@ get_thresh <- function(FST, low_thresh, high_thresh){if(FST <= low_thresh){retur
   if(FST > high_thresh){return(2)}}
 
 ###########################################################################
-### threshold parameters for plot
 
-low_thresh <- 0.0068 # empirical global FST
-high_thresh <- 0.068 # 10X global FST
-
-###########################################################################
-
-
-res <- read_table2("minmig_pc04_all_results.txt") %>%
+res <- read_table2(sim_out) %>%
   select(-PropTestsDropped) %>%
   drop_na() %>%
   rowwise() %>%
   mutate(test_sig = test_sig(pval=Chi2Pval, alpha=alpha)) %>%
   mutate_at(vars(Popsize, mig_rate), funs(factor))
-
 res$Popsize <- factor(res$Popsize, levels = c(500, 2500, 10000))
-
 
 # short-term 10 generations drift
 meanFST_gen10 <- res %>%

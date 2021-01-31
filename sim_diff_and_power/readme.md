@@ -38,3 +38,4 @@ The output of the model is a file called ``*_globFstChi2_results`` (example [her
 
 ![sim_out](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/sim_out.PNG?raw=true)
 
+Then you can use this tidy dataframe to analyze results and make plots! I used this [script]() to make plots from the simulations I ran for some manuscripts. 
