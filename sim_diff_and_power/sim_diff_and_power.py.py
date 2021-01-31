@@ -3,8 +3,9 @@
 # - 20201028 Natalie Lowell
 #
 # PURPOSE: this script runs a simulation model to evalute under which
-# migration rates and population sizes different Fst values are achieved
-# and how easily they are detected using a chi square test.
+# migration rates, population sizes, and number of generations of drift
+# different Fst values are achieved and how easily they are detected 
+# using a chi square test.
 #
 # How to use this file, minmig_pow_sim_NL.py
 # (1) Make sure you're operaing python 3 and have all the necessary modules installed
