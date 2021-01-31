@@ -1,11 +1,13 @@
-startTime 2021-01-30 22:20:40
------Parameters----nreplicates 10.0
+startTime 2021-01-30 22:24:22
+
+-----Parameters----
+replicates 10.0
 popsizes 100.0 500.0
 migrationRates  0.001 0.01
 generationsDrift 1.0 10.0
 
 -----Simulation-----
-rep 02021-01-30 22:20:40
+rep 02021-01-30 22:24:22
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -20,7 +22,7 @@ rep 02021-01-30 22:20:40
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 12021-01-30 22:20:55
+rep 12021-01-30 22:24:36
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -35,7 +37,7 @@ rep 12021-01-30 22:20:55
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 22021-01-30 22:21:10
+rep 22021-01-30 22:24:51
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -50,7 +52,7 @@ rep 22021-01-30 22:21:10
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 32021-01-30 22:21:26
+rep 32021-01-30 22:25:06
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -65,7 +67,7 @@ rep 32021-01-30 22:21:26
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 42021-01-30 22:21:41
+rep 42021-01-30 22:25:20
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -80,7 +82,7 @@ rep 42021-01-30 22:21:41
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 52021-01-30 22:21:56
+rep 52021-01-30 22:25:35
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -95,7 +97,7 @@ rep 52021-01-30 22:21:56
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 62021-01-30 22:22:11
+rep 62021-01-30 22:25:49
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -110,7 +112,7 @@ rep 62021-01-30 22:22:11
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 72021-01-30 22:22:26
+rep 72021-01-30 22:26:04
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -125,7 +127,7 @@ rep 72021-01-30 22:22:26
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 82021-01-30 22:22:41
+rep 82021-01-30 22:26:18
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -140,7 +142,7 @@ rep 82021-01-30 22:22:41
   migrate 0.01
    gens 1.0
    gens 10.0
-rep 92021-01-30 22:22:56
+rep 92021-01-30 22:26:33
  popsize 100.0
   migrate 0.001
    gens 1.0
@@ -155,4 +157,4 @@ rep 92021-01-30 22:22:56
   migrate 0.01
    gens 1.0
    gens 10.0
-endTime 2021-01-30 22:23:11
+endTime 2021-01-30 22:26:47

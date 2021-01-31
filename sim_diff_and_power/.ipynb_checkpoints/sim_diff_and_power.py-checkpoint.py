@@ -57,7 +57,7 @@ params_file.close()
 # write log 
 log = open(args.output + "_log.txt", "w")
 log.write("startTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
-log.write("-----Parameters----n")
+log.write("\n-----Parameters----\n")
 log.write("replicates " + str(params_dict["reps"][0]) + "\n")
 log.write("popsizes")
 for popsize in params_dict["popsizes"]:
