@@ -8,7 +8,7 @@ For each replicate of parameters (migration rate, population size, and generatio
 
 #### How to use this file, minmig_pow_sim_NL.py
 1. Make sure you're operaing python 3 and have all the necessary modules installed (i.e.,``argparse``, ``numpy``, ``matplotlib``, ``simuPOP``, ``time``, ``datetime``, ``scipy``)
-2. Prepare a file of your global allele frequencies (see example file [here](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/all_AFs_for_sp.txt)), where each line includes the number of alleles, followed by the frequency of each allele, delimited by white space. Allele frequencies must add to 1 for each locus. For example, the first rows should look something like this below, if you have biallelic loci. 
+2. Prepare a file of your global allele frequencies (see example file [here](https://github.com/nclowell/side_projects/blob/main/1_sim_diff_and_power/all_AFs_for_sp.txt)), where each line includes the number of alleles, followed by the frequency of each allele, delimited by white space. Allele frequencies must add to 1 for each locus. For example, the first rows should look something like this below, if you have biallelic loci. 
 
 ```
       2    0.935714  0.064286
@@ -16,7 +16,7 @@ For each replicate of parameters (migration rate, population size, and generatio
       2    0.819643  0.180357
 ```
 
-3. Prepare a parameters file (see [example](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/params.txt)), in which the values for each row's parameter are listed with white space between, to the left of the hash, like this:
+3. Prepare a parameters file (see [example](https://github.com/nclowell/side_projects/blob/main/1_sim_diff_and_power/params.txt)), in which the values for each row's parameter are listed with white space between, to the left of the hash, like this:
 
 ```
 ### parameter file for sim_diff_and_power.py
@@ -34,10 +34,10 @@ For each replicate of parameters (migration rate, population size, and generatio
    
 #### Output
 
-The output of the model is a file called ``*_globFstChi2_results`` (example [here](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/test_globFstChi2_results.txt))and it looks like this:
+The output of the model is a file called ``*_globFstChi2_results`` (example [here](https://github.com/nclowell/side_projects/blob/main/1_sim_diff_and_power/test_globFstChi2_results.txt))and it looks like this:
 
-![sim_out](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/sim_out.PNG?raw=true)
+![sim_out](https://github.com/nclowell/side_projects/blob/main/1_sim_diff_and_power/sim_out.PNG?raw=true)
 
-Then you can use this tidy dataframe to analyze results and make plots! I used this [script](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/make_plot.R) to make plots from the simulations I ran for some manuscripts. Here's an example of the figure, where short-term is 10 generations of drift, long-term is 100, and equilibrium is 1000.
+Then you can use this tidy dataframe to analyze results and make plots! I used this [script](https://github.com/nclowell/side_projects/blob/main/1_sim_diff_and_power/make_plot.R) to make plots from the simulations I ran for some manuscripts. Here's an example of the figure, where short-term is 10 generations of drift, long-term is 100, and equilibrium is 1000.
 
-![img](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/fst_tile_plots.PNG?raw=true)
+![img](https://github.com/nclowell/side_projects/blob/main/1_sim_diff_and_power/fst_tile_plots.PNG?raw=true)
