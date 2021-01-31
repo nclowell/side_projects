@@ -38,3 +38,6 @@ The output of the model is a file called ``*_globFstChi2_results`` (example [her
 
 ![sim_out](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/sim_out.PNG?raw=true)
 
+Then you can use this tidy dataframe to analyze results and make plots! I used this [script](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/make_plot.R) to make plots from the simulations I ran for some manuscripts. Here's an example of the figure, where short-term is 10 generations of drift, long-term is 100, and equilibrium is 1000.
+
+![img](https://github.com/nclowell/side_projects/blob/main/sim_diff_and_power/fst_tile_plots.PNG?raw=true)
