@@ -54,21 +54,24 @@ for line in params_file:
 params_file.close()
 
 # write log 
-batch_info = open(args.output + "_log.txt", "w")
-batch_info.write("startTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
-batch_info.write("replicates " + str(params_dict["reps"][0]) + "\n")
-batch_info.write("popsizes")
+log = open(args.output + "_log.txt", "w")
+log.write("startTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
+log.write("-----Parameters-----")
+log.write("replicates " + str(params_dict["reps"][0]) + "\n")
+log.write("popsizes")
 for popsize in params_dict["popsizes"]:
-    batch_info.write(" " + str(popsize))
-batch_info.write("\n")
-batch_info.write("migrationRates ")
+    log.write(" " + str(popsize))
+log.write("\n")
+log.write("migrationRates ")
 for mig_rate in params_dict["migrates"]:
-    batch_info.write(" " + str(mig_rate))
-batch_info.write("\n")
-batch_info.write("generationsDrift")
+    log.write(" " + str(mig_rate))
+log.write("\n")
+log.write("generationsDrift")
 for gens in params_dict["genss"]:
-    batch_info.write(" " + str(gens))
-batch_info.write("\n")
+    log.write(" " + str(gens))
+log.write("\n\n")
+log.write("-----Simulation-----")
+
 
 # get empirical afs
 all_afs_file = open(args.afs, "r") # while working in NB!
@@ -105,12 +108,16 @@ for rep in range(int((params_dict["reps"][0]))):
 # run simulations
 for rep in range(int(params_dict["reps"][0])):
     print("rep", rep, datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
+    log.write("rep " + str(rep) + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')))
     for popsize in params_dict["popsizes"]:
         print(" popsize", popsize)
+        log.write((" popsize " + str(popsize)))
         for mig_rate in params_dict["migrates"]:
             print("  migrate", mig_rate)
+            log.write("  migrate " + str(mig_rate))
             for gens in params_dict["genss"]:
                 print("   gens", gens)
+                log.write("   gens " + str(gens))
 
                 # initialize pop
                 pop = sim.Population(size=[popsize]*2, # two subpops
@@ -195,8 +202,8 @@ for rep in range(int(params_dict["reps"][0])):
                 sp_for_cg.write(str(dropped_chi[rep][popsize][mig_rate][gens]) + "\n")
 sp_for_cg.close()
 
-batch_info.write("endTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
-batch_info.close()
+log.write("endTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
+log.close()
 
 endTime = time.time()
 print("endTime", datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
