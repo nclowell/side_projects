@@ -57,7 +57,7 @@ params_file.close()
 # write log 
 log = open(args.output + "_log.txt", "w")
 log.write("startTime " + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
-log.write("-----Parameters-----")
+log.write("-----Parameters----n")
 log.write("replicates " + str(params_dict["reps"][0]) + "\n")
 log.write("popsizes")
 for popsize in params_dict["popsizes"]:
@@ -71,7 +71,7 @@ log.write("generationsDrift")
 for gens in params_dict["genss"]:
     log.write(" " + str(gens))
 log.write("\n\n")
-log.write("-----Simulation-----")
+log.write("-----Simulation-----\n")
 
 
 # get empirical afs
@@ -109,16 +109,16 @@ for rep in range(int((params_dict["reps"][0]))):
 # run simulations
 for rep in range(int(params_dict["reps"][0])):
     print("rep", rep, datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
-    log.write("rep " + str(rep) + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')))
+    log.write("rep " + str(rep) + str(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))+"\n")
     for popsize in params_dict["popsizes"]:
         print(" popsize", popsize)
-        log.write((" popsize " + str(popsize)))
+        log.write(" popsize " + str(popsize) + "\n")
         for mig_rate in params_dict["migrates"]:
             print("  migrate", mig_rate)
-            log.write("  migrate " + str(mig_rate))
+            log.write("  migrate " + str(mig_rate) + "\n")
             for gens in params_dict["genss"]:
                 print("   gens", gens)
-                log.write("   gens " + str(gens))
+                log.write("   gens " + str(gens) + "\n")
 
                 # initialize pop
                 pop = sim.Population(size=[popsize]*2, # two subpops
